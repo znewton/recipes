@@ -1,0 +1,48 @@
+#!/bin/bash
+
+R_NAME="$1"
+R_TITLE="$2"
+
+R_DIR="recipes"
+
+HTML="$R_DIR/$R_NAME.html"
+
+touch "$HTML"
+cat > "$HTML" << HTML
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>${R_TITLE}</title>
+    <meta name="description" content="${R_TITLE} Recipe"/>
+    <meta property="og:title" content="${R_TITLE}" />
+    <meta property="og:description" content="${R_TITLE} Recipe"/>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body ontouchstart>
+    <header>
+      <h1>${R_TITLE}</h1>
+    </header>
+    <main id="main"></main>
+    <span id="back"><span></span><span></span><span></span></span>
+  </body>
+  <script type="text/javascript" src="/recipes.js"></script>
+  <script type="application/javascript">
+    const recipe = recipes.${R_NAME};
+    const main = document.getElementById('main');
+    main.innerHTML = recipe.toPageHTML();
+
+    const backButton = document.getElementById('back');
+    backButton.addEventListener('click', () => {
+      if (document.referrer.indexOf(window.location.host) !== -1) {
+        window.history.back();
+      } else {
+        window.location.href='/';
+      }
+    });
+  </script>
+</html>
+HTML
+

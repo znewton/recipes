@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipes</title>
+    <meta name="description" content="A compilation of my recipes for roommates and friends to use. Or anyone, I guess."/>
+    <meta property="og:title" content="Recipes" />
+    <meta property="og:description" content="A compilation of my recipes for roommates and friends to use. Or anyone, I guess."/>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Recipes</h1>
+    </header>
+    <main>
+      <section>
+        <input placeholder="Search..." id="search" name="recipe-search" />
+      </section>
+      <ul id="recipe-list"></ul>
+    </main>
+  </body>
+  <script type="text/javascript" src="recipes.js"></script>
+  <script type="application/javascript">
+    const searchInputElem = document.getElementById('search');
+    const recipeListWrapper = document.getElementById('recipe-list');
+
+    let searchDebounce = null;
+    let searchTerm = '';
+
+    function handleSearch(e) {
+      const value = e.target.value;
+      searchTerm = value;
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(buildList, 300);
+    }
+
+    function buildList() {
+      const filteredList = Object.keys(recipes).filter(key => recipes[key].toSearchMatchString().includes(searchTerm));
+      recipeListWrapper.innerHTML = '';
+      for (let i = 0; i < filteredList.length; i++) {
+        const recipe = recipes[filteredList[i]];
+        const item = document.createElement('li');
+        item.className = 'recipe-list-item';
+        item.innerHTML = recipe.toListItemHTML();
+        recipeListWrapper.appendChild(item);
+      }
+    }   
+
+    searchInputElem.addEventListener('input', handleSearch);
+    buildList();
+  </script>
+</html>

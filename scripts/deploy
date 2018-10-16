@@ -1,0 +1,7 @@
+#!/bin/bash
+
+USERNAME="figgynewts"
+SERVER="ftp.znewton.xyz"
+DOMAIN="recipes.znewton.xyz"
+
+scp -r build/* "${USERNAME}@${SERVER}:${DOMAIN}/"
