@@ -1,9 +1,69 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 100%;
   color: #3e3e4a;
 }
 
 * {
   box-sizing: border-box;
+}
+
+body, main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-bar {
+  position: relative;
+  --search-icon-width: 2rem;
+  width: 100%;
+}
+.search-input {
+  padding: 0.5rem calc(var(--search-icon-width) + 1rem);
+  font-size: inherit;
+  border-radius: 1.5rem;
+  border: none;
+  box-shadow: 0 5px 11px rgba(50,50,93,0.08), 0 2px 5px rgba(0,0,0,0.06);
+  flex-grow: 1;
+  width: 100%;
+}
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 10px 23px rgba(50,50,93,0.1), 0 3px 10px rgba(0,0,0,0.07);
+}
+.search-icon {
+  width: var(--search-icon-width);
+  position: relative;
+}
+.search-icon::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  border: 1px solid #aeaeba;
+  right: 0.35rem;
+  top: 0.45rem;
+}
+.search-icon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 0.75rem;
+  width: 1px;
+  background-color: #aeaeba;
+  transform: rotate(45deg);
+  right: 1.25rem;
+  top: 1.05rem;
+}
+.search-bar .search-icon {
+  position: absolute;
+  left: 0.5rem;
+}
+
+.recipe-list {
+  list-style-type: none;
 }
 

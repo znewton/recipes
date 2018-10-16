@@ -14,8 +14,9 @@
       <h1>Recipes</h1>
     </header>
     <main>
-      <section>
-        <input placeholder="Search..." id="search" name="recipe-search" />
+      <section class="search-bar">
+        <span class="search-icon"></span>
+        <input class="search-input" placeholder="Search..." id="search" name="recipe-search" />
       </section>
       <ul id="recipe-list"></ul>
     </main>
@@ -30,7 +31,7 @@
 
     function handleSearch(e) {
       const value = e.target.value;
-      searchTerm = value;
+      searchTerm = (value || '').toLowerCase();
       clearTimeout(searchDebounce);
       searchDebounce = setTimeout(buildList, 300);
     }
