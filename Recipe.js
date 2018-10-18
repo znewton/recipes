@@ -48,7 +48,18 @@ class Recipe {
 <section class="card full-width">
   <h2>Ingredients</h2>
   <ul class="ingredients-list">
-    ${this.ingredients.map(ingredient => `<li>${ingredient}</li>`).join("\n")}
+    ${this.ingredients
+      .map(
+        (ingredient, i) => `
+        <li>
+          <label>
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+            <span>${ingredient}</span>
+          </label>
+        </li>`
+      )
+      .join("\n")}
   </ul>
 </section>
 <section class="card full-width">
