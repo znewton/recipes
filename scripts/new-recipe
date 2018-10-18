@@ -26,7 +26,7 @@ cat > "$HTML" << HTML
       <h1>${R_TITLE}</h1>
     </header>
     <main id="main"></main>
-    <span id="back"><span></span><span></span><span></span></span>
+    <span id="back"><span></span><span></span></span>
   </body>
   <script type="text/javascript" src="/Recipe.js"></script>
   <script type="text/javascript" src="/recipes.js"></script>
