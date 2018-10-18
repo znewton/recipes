@@ -38,10 +38,13 @@
     }
 
     function buildList() {
-      const filteredList = Object.keys(recipes).filter(key => recipes[key].toSearchMatchString().includes(searchTerm));
       recipeListWrapper.innerHTML = '';
-      for (let i = 0; i < filteredList.length; i++) {
-        const recipe = recipes[filteredList[i]];
+      const recipeKeys = Object.keys(recipes);
+      for (let i = 0; i < recipeKeys.length; i++) {
+        const recipe = new Recipe(recipes[recipeKeys[i]]);
+        if (!recipe.toSearchMatchString().includes(searchTerm)) {
+          continue;
+        }
         const item = document.createElement('li');
         item.className = 'recipe-list-item';
         item.innerHTML = recipe.toListItemHTML();

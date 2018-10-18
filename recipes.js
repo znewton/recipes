@@ -1,5 +1,5 @@
 const recipes = {
-  guacamole: new Recipe({
+  guacamole: {
     title: "Guacamole",
     name: "guacamole",
     description:
@@ -26,5 +26,7 @@ const recipes = {
       "Serve with chips or on a burrito or something"
     ],
     notes: []
-  })
+  }
 };
+
+if (typeof window === "undefined") module.exports = recipes;
