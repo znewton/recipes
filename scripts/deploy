@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./scripts/build
+
 USERNAME="figgynewts"
 SERVER="ftp.znewton.xyz"
 DOMAIN="recipes.znewton.xyz"

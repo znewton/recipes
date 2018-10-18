@@ -1,12 +1,12 @@
 class Recipe {
   constructor({
-    title = "",
-    name = "404",
-    description = "",
+    title = '',
+    name = '404',
+    description = '',
     tags = [],
     ingredients = [],
     directions = [],
-    notes = []
+    notes = [],
   }) {
     this.title = title;
     this.name = name;
@@ -21,11 +21,11 @@ class Recipe {
     return [
       this.title,
       this.description,
-      this.tags.join(" "),
-      this.tags.join(" "),
-      this.ingredients.join(" ")
+      this.tags.join(' '),
+      this.tags.join(' '),
+      this.ingredients.join(' '),
     ]
-      .join(" ")
+      .join(' ')
       .toLowerCase();
   }
 
@@ -37,7 +37,7 @@ class Recipe {
   <div class="recipe-tags">
     ${(this.tags || [])
       .map(tag => `<span class="tag">${tag}</span>`)
-      .join("\n")}
+      .join('\n')}
   </div>
 </a>
     `;
@@ -59,19 +59,19 @@ class Recipe {
           </label>
         </li>`
       )
-      .join("\n")}
+      .join('\n')}
   </ul>
 </section>
 <section class="card full-width">
   <h2>Directions</h2>
   <ol class="directions-list">
-    ${this.directions.map(direction => `<li>${direction}</li>`).join("\n")}
+    ${this.directions.map(direction => `<li>${direction}</li>`).join('\n')}
   </ol>
 </section>
 <section class="card full-width">
   <h2>Notes</h2>
   <ul class="notes-list">
-    ${this.notes.map(note => `<li>${note}</li>`).join("\n")}
+    ${this.notes.map(note => `<li>${note}</li>`).join('\n')}
   </ul>
 </section>
     `;
