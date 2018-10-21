@@ -40,10 +40,10 @@
 
     function buildList() {
       recipeListWrapper.innerHTML = '';
-      const recipeKeys = Object.keys(recipes);
+      const recipeKeys = Object.keys(recipes).sort();
       for (let i = 0; i < recipeKeys.length; i++) {
         const recipe = new Recipe(recipes[recipeKeys[i]]);
-        if (!recipe.toSearchMatchString().includes(searchTerm)) {
+        if (recipe.ingredients.length === 0 || !recipe.toSearchMatchString().includes(searchTerm)) {
           continue;
         }
         const item = document.createElement('li');
