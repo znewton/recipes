@@ -292,7 +292,7 @@ const recipes = {
     courtesy_of: 'Workiva Cafe Chef',
     description:
       "This dish was served at the Workiva Cafe for a week in the Fall 2016. Technically Workiva property, so please don't sell it",
-    tags: [ 'pasta', 'Fall' ],
+    tags: ['pasta', 'Fall'],
     ingredients: [
       '2 Acorn Squash',
       'Olive oil',
@@ -321,11 +321,9 @@ const recipes = {
           <li>add noodles, touch more water, reduce</li>
           <li>add squash</li>
         </ul>`,
-      'Plate and serve with freshly grated parmesan on top'
+      'Plate and serve with freshly grated parmesan on top',
     ],
-    notes: [
-      'Squash and butter can be made and refrigerated well-beforehand.'
-    ],
+    notes: ['Squash and butter can be made and refrigerated well-beforehand.'],
   },
   roasted_veggie_hoagies: {
     title: 'Roasted Veggie & Mushroom Hoagies',
@@ -349,11 +347,31 @@ const recipes = {
     title: 'Salsa',
     name: 'salsa',
     courtesy_of: 'Tristan Duyvejonck',
-    description: '',
-    tags: [],
-    ingredients: [],
-    directions: [],
-    notes: [],
+    description:
+      'Expertly crafted by a freshman software engineering student; traditionally eaten mixed with scrambled eggs while playing copious amounts of video games.',
+    tags: ['dip', 'easy'],
+    ingredients: [
+      '20 oz canned Diced Tomatoes w/ Green Chiles (such as Rotel)',
+      '28 oz canned Whole Tomatoes',
+      '1/2 cup Fresh Cilantro (or none)',
+      '1/4 Chopped Onion (red, white, or yellow)',
+      '1-2 cloves Minced Garlic',
+      '1 Jalapeno (w/ membrane & seeds included), thinly quartered & sliced',
+      'Ground Cumin',
+      'Salt',
+      'Sugar',
+      'Cayenne',
+      "1/2 lime's juice",
+    ],
+    directions: [
+      'Throw ingredients into large food processor (>= 12 cups)',
+      'Pulse till desired consistency (10-15 pulses)',
+      'Adjust seasonings to taste',
+    ],
+    notes: [
+      'Heat increases over time in the fridge due to jalapeno seeds',
+      "It ain't Snoop's, but it'll do",
+    ],
   },
   butter_cream_sauce: {
     title: 'Butter Cream Sauce',
@@ -441,7 +459,8 @@ const recipes = {
   brazilian_fries: {
     title: 'Brazilian Fries',
     name: 'brazilian_fries',
-    description: 'Best made and eaten semi-buzzed at 1am, these fries will knock your drunk friends\' socks off.',
+    description:
+      "Best made and eaten semi-buzzed at 1am, these fries will knock your drunk friends' socks off.",
     tags: ['appetizer', 'side', 'drunk-food', 'easy'],
     ingredients: [
       'Yukon Gold (or similar) potatoes',
@@ -450,7 +469,7 @@ const recipes = {
       'Cayenne',
       'Olive Oil',
       'Mayonnaise',
-      'Garlic Powder'
+      'Garlic Powder',
     ],
     directions: [
       'Cut potatoes into wedges',
@@ -458,12 +477,10 @@ const recipes = {
       'Place on baking sheet with a skinless-side touching the sheet',
       'Bake at 420&deg; for ~30 min, flip each wedge (as well as possible, depending on amount of alcohol consumption and laziness); cook for another 15-30 min',
       'Mix together mayonnaise, garlic powder, salt, pepper, and a touch of cayenne',
-      'Never risk Cafe Beaudelaire being out of fries again'
+      'Never risk Cafe Beaudelaire being out of fries again',
     ],
-    notes: [
-      'Exercise caution when handling a knife while intoxicated'
-    ],
-  }
+    notes: ['Exercise caution when handling a knife while intoxicated'],
+  },
 };
 
 if (typeof window === 'undefined') module.exports = recipes;
