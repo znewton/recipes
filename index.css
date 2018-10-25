@@ -122,6 +122,13 @@ main {
 .notes-list li, .ingredients-list li, .directions-list li {
   margin-bottom: 0.5rem;
 }
+.separator {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #eeeefa;
+  margin: 1rem 0;
+}
 ul.ingredients-list {
   list-style-type: none;
   margin-left: 0;
@@ -146,6 +153,7 @@ ul.ingredients-list {
 }
 .checkmark {
   position: relative;
+  min-width: 1.2rem;
   height: 1.2rem;
   width: 1.2rem;
   background-color: #eeeefa;

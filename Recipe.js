@@ -2,6 +2,7 @@ class Recipe {
   constructor({
     title = '',
     name = '404',
+    courtesy_of = '',
     description = '',
     tags = [],
     ingredients = [],
@@ -10,6 +11,7 @@ class Recipe {
   }) {
     this.title = title;
     this.name = name;
+    this.courtesy_of = courtesy_of;
     this.description = description;
     this.tags = tags;
     this.ingredients = ingredients;
@@ -44,7 +46,11 @@ class Recipe {
   }
 
   toPageHTML() {
+    const credit = this.courtesy_of
+      ? `<p>Courtesy of <strong>${this.courtesy_of}</strong></p>`
+      : '';
     return `
+${credit}
 <section class="card full-width">
   <h2>Ingredients</h2>
   <ul class="ingredients-list">
@@ -52,11 +58,15 @@ class Recipe {
       .map(
         (ingredient, i) => `
         <li>
-          <label>
+          ${
+            ingredient === '<sep>'
+              ? '<span class="separator"></span>'
+              : `<label>
             <input type="checkbox" />
             <span class="checkmark"></span>
             <span>${ingredient}</span>
-          </label>
+          </label>`
+          }
         </li>`
       )
       .join('\n')}
