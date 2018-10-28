@@ -80,7 +80,7 @@ const recipes = {
     title: 'Tomato Bruschetta',
     name: 'bruschetta',
     description: '',
-    tags: ['appetizer', 'dip', 'fan favorite'],
+    tags: ['appetizer', 'dip', 'fan-favorite'],
     ingredients: [
       '5 medium sized Tomatoes (more firm than soft)',
       '4 cloves Garlic',
@@ -113,7 +113,7 @@ const recipes = {
     name: 'thai_peanut_noodles',
     description:
       'Have you ever thought, "Damn, I could go for a spicy, salty, peanut butter sandwich on noodles right now"? Either way, try this recipe. I have yet to find someone who doesn\'t love it.',
-    tags: ['vegan', 'pasta', 'leftovers', 'fan favorite'],
+    tags: ['vegan', 'pasta', 'leftovers', 'fan-favorite'],
     ingredients: [
       '1/3 cup Chunky Peanut Butter',
       '1/3 cup Soy Sauce',
@@ -232,11 +232,22 @@ const recipes = {
     notes: [],
   },
   roasted_veggies: {
-    title: 'Roasted Veggies',
+    title: 'Roasted Veggie(s)',
     name: 'roasted_veggies',
-    description: '',
-    tags: [],
-    ingredients: [],
+    description: 'My go-to side dish for most pasta meals',
+    tags: ['side', 'vegan'],
+    ingredients: [
+      `One or more vegetable; I recommend one of the following (in order):
+      <ul>
+        <li>Carrots</li>
+        <li>Asparagus</li>
+        <li>Carrots, potatoes, red onion, bell peppers</li>
+      </ul>
+      `,
+      'Olive Oil',
+      'Salt',
+      'Pepper',
+    ],
     directions: [],
     notes: [],
   },
@@ -252,31 +263,93 @@ const recipes = {
   mushroom_stroganoff: {
     title: 'Mushroom Stroganoff',
     name: 'mushroom_stroganoff',
-    description: '',
-    tags: [],
-    ingredients: [],
-    directions: [],
-    notes: [],
+    description:
+      "Tryna impress? Serve this with Artichoke Heart Dip as an appetizer and Roasted Asparagus on the side. I've seen people eat a pound of food each with this combo.",
+    tags: ['pasta', 'fan-favorite'],
+    ingredients: [
+      'Smallish yellow or white onion',
+      '3 Portabella Mushrooms, cubed, no stems',
+      '2 oz Butter',
+      'Good amount of Dill (minced fresh, or dry)',
+      'Splash of Dry Sherry',
+      '~1.5 cups Veggie Broth',
+      '1-3 tbsp Flour',
+      '~8oz Sour Cream',
+      'Salt, Pepper, Cayenne',
+      '<sep>',
+      '12-16 oz Extra-wide Ribbon Noodles',
+    ],
+    directions: [
+      'Preheat cast iron; melt butter; add mushrooms and onions; season with Salt (a good amount), pepper, and a touch of cayenne',
+      'Once mushrooms have released most of their liquid and onions are soft & translucent, throw in some dill',
+      'Make sure veggie broth is hot and ready on a back burner',
+      'Sautee until mushrooms start to have brown/red edges; deglaze with a reasonable splash of sherry and cook it off',
+      '1 spoon at a time, stir in flour until cakey/clumpy ("it should look like you ruined it and this could never be a good sauce" &mdash; Dad)',
+      'Add veggie broth; allow to cook into mushrooms and reduce; throw in more dill while reducing',
+      'Add sour cream and more dill',
+      'Serve over noodles, using leftover fresh dill for garnish',
+    ],
+    notes: [
+      'When using dry dill instead of fresh, remember to not use as much as you would fresh',
+      "I always use fresh dill, Dad always uses dry dill; don't sweat it",
+    ],
   },
   marinara: {
     title: 'Marinara',
     name: 'marinara',
     courtesy_of: 'Dad',
-    description: '',
-    tags: [],
-    ingredients: [],
-    directions: [],
-    notes: [],
+    description: '"A dang good spaghetti sauce" &mdash; Roisin Welch',
+    tags: ['pasta', 'sauce', 'vegan'],
+    ingredients: [
+      'Olive Oil',
+      '~1 Yellow Onion, finely diced',
+      'Dried Thyme',
+      'Fennel Seed',
+      'Salt',
+      'Pepper',
+      '~30 oz canned Crushed Tomatoes',
+      '5-6 cloves Garlic, finely minced',
+      'Thinly sliced Crimini Mushrooms (optional)',
+      'Ground Veggie Burger (optional)',
+    ],
+    directions: [
+      'In a large non-stick skillet (I prefer cast iron), drizzle enough olive oil to coat the bottom',
+      'Sautee onions, mushrooms, and veggie burger with some salt, pepper, thyme and fennel seed until onions are just translucent',
+      'Pour in crushed tomatoes; stir; let simmer; stir in garlic',
+      'Simmer on low heat for 30-60 minutes; stir occasionally; cover partially if losing too much liquid',
+    ],
+    notes: [
+      'Mushrooms and veggie burger are optional, but I prefer this recipe with a lot of mushrooms',
+      'If serving picky guests, throw in a food processor until relatively smooth',
+      'Super awesome if you simmer some diced carrots and zucchini in it until just softened; not applicable if food-processor-ing',
+    ],
   },
   tortilla_wraps: {
     title: 'Tortilla Wraps',
     name: 'tortilla_wraps',
     courtesy_of: 'Matt & Alyssa Kirby',
-    description: '',
-    tags: [],
-    ingredients: [],
-    directions: [],
-    notes: [],
+    description: 'A cabin picnic tradition',
+    tags: ['appetizer'],
+    ingredients: [
+      '8 oz sour cream',
+      '8 oz softened cream cheese',
+      '4 oz black olives',
+      '8 oz bag of shredded cheese',
+      '1 diced red pepper',
+      '4 oz can green chiles',
+      '1/2 bunch scallions',
+      '4 oz can chopped jalapenos',
+      'few dashes of Lowry\'s Seasoned Salt',
+    ],
+    directions: [
+      'Smooth over tortilla',
+      'Roll up tortilla and cover with saran wrap',
+      'Chill for a few hours',
+      'Serve with salsa of choice',
+    ],
+    notes: [
+      'Makes ~8 tortillas (depending on tortilla size)'
+    ],
   },
   hummus: {
     title: 'Hummus',
