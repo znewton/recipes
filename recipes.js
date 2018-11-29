@@ -134,7 +134,7 @@ const recipes = {
     ],
     directions: [
       'Finely mince garlic, ginger, and green onions',
-      'Whisk together Peanut Butter, Soy sauce, Honey, Sesame Oil, Canola Oil, Rice Vinegar, Red Pepper Flakes, Garlic, and Ginger',
+      'Whisk together Peanut Butter, Soy sauce, Honey, Sesame Oil, Canola Oil, Rice Vinegar, Red Pepper Flakes, Garlic, Green Onions, and Ginger',
       "Cut carrots into sticks; deseed bell peppers and slice relatively thinly; just think about sizes you'd want to mix and eat on the same fork as noodles",
       'Stir fry carrots and bell pepper in canola oil, soy sauce (, and some more minced ginger & garlic for extra flavor) in cast iron skillet',
       'Cook spaghetti (in heavily salted water, duh)',
@@ -152,10 +152,27 @@ const recipes = {
     title: 'Pesto',
     name: 'pesto',
     description: '',
-    tags: [],
-    ingredients: [],
-    directions: [],
-    notes: [],
+    tags: ['pasta', 'easy'],
+    ingredients: [
+      '1-2 oz Fresh Basil Leaves',
+      '1 excessive quantity Spinach Leaves',
+      '3-4+ cloves Garlic',
+      '1-2 handfuls Walnuts, Pine Nuts, or Sunflower Seeds',
+      '1/2-1 Lemon Juice',
+      '1-2 cups Olive Oil',
+      '1 mound Parmigiano Regiano (or Parmesan, you do you)',
+      'Salt',
+    ],
+    directions: [
+      'Throw basil, garlic, nuts, and a good amount of olive oil into a food processor or high-speed blender',
+      'Add spinach leaves, cheese and olive oil until desired consistency',
+      'Add salt and lemon juice to taste',
+    ],
+    notes: [
+      'When serving over pasta or something of high volume, mix with half & half over medium heat to make it go further',
+      "100% basil (as opposed to part basil part spinach) has a much stronger flavor that some people like, some people don't, but I enjoy it",
+      'Use whatever nuts you can afford',
+    ],
   },
   alfredo: {
     title: 'Alfredo',
@@ -339,7 +356,7 @@ const recipes = {
       '4 oz can green chiles',
       '1/2 bunch scallions',
       '4 oz can chopped jalapenos',
-      'few dashes of Lowry\'s Seasoned Salt',
+      "few dashes of Lowry's Seasoned Salt",
     ],
     directions: [
       'Smooth over tortilla',
@@ -347,9 +364,7 @@ const recipes = {
       'Chill for a few hours',
       'Serve with salsa of choice',
     ],
-    notes: [
-      'Makes ~8 tortillas (depending on tortilla size)'
-    ],
+    notes: ['Makes ~8 tortillas (depending on tortilla size)'],
   },
   hummus: {
     title: 'Hummus',
