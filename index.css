@@ -161,7 +161,7 @@ ul.ingredients-list {
   border-radius: 2px;
 }
 .checkmark::after {
-  display: none;
+  opacity: 0.75;
   position: absolute;
   content: "";
   left: 0.4rem;
@@ -181,7 +181,7 @@ label input:checked ~ .checkmark {
   background-color: #1da1f2;
 }
 label input:checked ~ .checkmark::after {
-  display: block;  
+  opacity: 1;  
 }
 
 
