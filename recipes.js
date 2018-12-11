@@ -151,7 +151,7 @@ const recipes = {
   pesto: {
     title: 'Pesto',
     name: 'pesto',
-    description: '',
+    description: 'That good green stuff',
     tags: ['pasta', 'easy'],
     ingredients: [
       '1-2 oz Fresh Basil Leaves',
@@ -177,11 +177,30 @@ const recipes = {
   alfredo: {
     title: 'Alfredo',
     name: 'alfredo',
-    description: '',
-    tags: [],
-    ingredients: [],
-    directions: [],
-    notes: [],
+    courtesy_of: 'Dad',
+    description: 'Basic white sauce',
+    tags: ['pasta', 'easy'],
+    ingredients: [
+      '~1 tbsp Butter',
+      '3-5 cloves Garlic',
+      '~1 cup Heavy Whipping Cream',
+      '~1 cup Half & Half',
+      '~1 cup grated Parmesan',
+      'Pepper',
+    ],
+    directions: [
+      'Preheat oven to 375&deg;',
+      'Cut bases off garlic (do not peel); wrap in foil; bake in oven until strongly fragrant',
+      'Peel garlic (should just come right off) and finely mince',
+      'Melt butter in small saucepan over medium heat',
+      'Add garlic; wait ~30-45s; add Heavy Whipping Cream; stir',
+      'Once combined, add Half & Half; stir',
+      'Melt in Parmesan while stirring',
+      'Add just a touch of freshly cracked black pepper',
+    ],
+    notes: [
+      'For quick and easy dinner, mix this into some fusilli noodles (probably ~8-12oz pasta per above recipe). Top with parmesan',
+    ],
   },
   orzo_salad: {
     title: 'Orzo Salad',
@@ -369,9 +388,19 @@ const recipes = {
   hummus: {
     title: 'Hummus',
     name: 'hummus',
-    description: '',
-    tags: [],
-    ingredients: [],
+    description: '"More than I ever thought hummus could be" &mdash Alan Hogan',
+    tags: ['appetizer'],
+    ingredients: [
+      '2 15 oz cans Garbanzo Beans (w/ salt)',
+      '3-5 cloves garlic (depending on how many days you want garlic breath)',
+      '1-2 tbsp Tahini',
+      '2-3 tbsp Olive Oil',
+      '1 lemon',
+      'Salt',
+      'Cumin',
+      'Cayenne',
+      'Turmeric'
+    ],
     directions: [],
     notes: [],
   },
@@ -521,7 +550,7 @@ const recipes = {
   luke_pizza_dough: {
     title: 'Lukes Pizza Dough',
     name: 'luke_pizza_dough',
-    courtesy_of: 'Luke PEterson',
+    courtesy_of: 'Luke Peterson',
     description: '',
     tags: [],
     ingredients: [],
@@ -531,11 +560,32 @@ const recipes = {
   mushrooms: {
     title: 'Sauteed Mushrooms',
     name: 'mushrooms',
-    description: '',
-    tags: [],
-    ingredients: [],
-    directions: [],
-    notes: [],
+    description:
+      '"I don\'t like mushrooms, but I could eat these all day" &mdash All but 1 person who has tried these',
+    tags: ['fan favorite', 'easy'],
+    ingredients: [
+      '~2 tbsp Butter',
+      '~4 large Portabello Mushrooms',
+      'Salt',
+      'Pepper',
+      'Sage',
+      'Dry Sherry',
+    ],
+    directions: [
+      'Remove stems and wash mushrooms under cold water; place on paper towel',
+      'Slice mushrooms into quarter inch strips, then halve those (<del>| | | |</del>)',
+      'Heat a cast iron skillet over medium heat',
+      'Add butter and mushrooms',
+      'Generously salt and pepper the mushrooms',
+      'Sautee until liquid is released (puddled in the bottom), stirring occasionally',
+      'Add either 1 tsp dried sage or ~4 leaves chopped fresh sage',
+      'Sautee until liquid cooked off and mushrooms are starting to stick to the skillet',
+      'Deglaze with a good splash of sherry, but not so mush as to overpower the other flavors',
+      'Cook off sherry; reduce heat to keep warm until ready to serve (ideally right away)',
+    ],
+    notes: [
+      'Serve on pesto, alfredo, or white wine cream sauce to blow some minds',
+    ],
   },
   stomping_grounds_paninis: {
     title: 'Stomping Grounds Paninis',
@@ -568,11 +618,35 @@ const recipes = {
     title: "Rosie's Thai Curry",
     name: 'rosie_thai_curry',
     courtesy_of: 'Roisin Welch',
-    description: '',
-    tags: [],
-    ingredients: [],
-    directions: [],
-    notes: [],
+    description:
+      "Had to pester Rosie for this recipe for a few months... so, you're welcome",
+    tags: ['vegan'],
+    ingredients: [
+      '1 can of Maesri Green Curry Paste (Red for less hot, Yellow for least hot)',
+      '3 - 4 cans of coconut milk (at least 3, will have to taste to see if you want the 4th)',
+      'Bundle of carrots chopped into sticks that are a good size to eat (2" - 2.5")',
+      'Red bell pepper chopped to bite size (not diced)',
+      'Green bell pepper (same as above)',
+      '2 Zucchinis',
+      "Potatoes, Broccoli, Onion, Green Beans, Basil etc... There are so many good veggies for this stuff that you can choose what else you want to include. Pick at least broccoli or potatoes to provide some extra filling, ya know, the big guy of the dish. Want to make sure you have enough veggies or it's more like soup, but not too many that there isn't any liquid for the rice!",
+      'Rice, duh. Preferably Jasmine.',
+      'Tofu (optional) (Follow <a href="https://www.youtube.com/watch?v=BGUBTrKw9Hg">The Easy Vegan curry video</a> tofu instructions)',
+    ],
+    directions: [
+      'Thoroughly (I mean thoroughly), shake the coconut milk cans before opening',
+      "Try to time cooking the rice so that it's ready when the curry is (follow instructions on rice)",
+      `In a large pot (dutch oven size) over medium-high heat:
+        <ol>
+          <li>Add 1 can coconut milk and the curry paste; cook until fragrant</li>
+          <li>Add rest of the coconut milk; add potatoes</li>
+          <li>Once potatoes are just beginning to soften, add the rest of the veggies</li>
+          <li>Simmer until veggies are just barely soft, but very much not mush</li>
+        </ol>
+      `,
+    ],
+    notes: [
+      'Beware when sauteeing paste!! The aromas/fumes are crazy strong and will literally make you cough and your eyes burn just when near it! Do this step before guests arrive.',
+    ],
   },
   brazilian_fries: {
     title: 'Brazilian Fries',
