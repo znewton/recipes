@@ -388,7 +388,7 @@ const recipes = {
   hummus: {
     title: 'Hummus',
     name: 'hummus',
-    description: '"More than I ever thought hummus could be" &mdash Alan Hogan',
+    description: '"More than I ever thought hummus could be" &mdash; Alan Hogan',
     tags: ['appetizer'],
     ingredients: [
       '2 15 oz cans Garbanzo Beans (w/ salt)',
@@ -572,7 +572,7 @@ const recipes = {
     title: 'Sauteed Mushrooms',
     name: 'mushrooms',
     description:
-      '"I don\'t like mushrooms, but I could eat these all day" &mdash All but 1 person who has tried these',
+      '"I don\'t like mushrooms, but I could eat these all day" &mdash; All but 1 person who has tried these',
     tags: ['fan favorite', 'easy'],
     ingredients: [
       '~2 tbsp Butter',
