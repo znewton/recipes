@@ -6,4 +6,10 @@ USERNAME="figgynewts"
 SERVER="ftp.znewton.xyz"
 DOMAIN="recipes.znewton.xyz"
 
+ssh "${USERNAME}@${SERVER}" << EOF
+  cd "${DOMAIN}"
+  rm -rf static
+  exit
+EOF
+
 scp -r build/* "${USERNAME}@${SERVER}:${DOMAIN}/"
