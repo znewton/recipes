@@ -12,4 +12,4 @@ ssh "${USERNAME}@${SERVER}" << EOF
   exit
 EOF
 
-scp -r build/* "${USERNAME}@${SERVER}:${DOMAIN}/"
+scp -r build/* .htaccess "${USERNAME}@${SERVER}:${DOMAIN}/"
