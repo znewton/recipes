@@ -1,0 +1,21 @@
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "description": "Recipe book",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "now-build": "./scripts/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znewton/recipes.git"
+  },
+  "author": "Zach Newton <zach@znewton.xyz>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/znewton/recipes/issues"
+  },
+  "homepage": "https://github.com/znewton/recipes#readme"
+}

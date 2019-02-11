@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "recipes",
+  "alias": ["recipes.znewton.xyz", "www.recipes.znewton.xyz"],
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "build" } }
+  ]
+}
