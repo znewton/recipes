@@ -19,6 +19,12 @@ body, main {
 main {
   min-width: 80%; 
 }
+@media screen and (min-width: 800px) {
+  main {
+    min-width: unset;
+    max-width: 800px;
+  }
+}
 
 .search-bar {
   position: relative;
