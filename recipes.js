@@ -117,7 +117,7 @@ const recipes = {
     ingredients: [
       '1/3 cup Chunky Peanut Butter',
       '1/3 cup Soy Sauce',
-      '2 tbsp Honey',
+      '1 tbsp Honey',
       '1 tbsp Sesame oil',
       '2 tbsp Canola oil',
       '1 tbsp Rice Vinegar',
@@ -385,6 +385,27 @@ const recipes = {
     ],
     notes: ['Makes ~8 tortillas (depending on tortilla size)'],
   },
+  roasted_garlic: {
+    title: 'Roasted Garlic',
+    name: 'roasted_garlic',
+    description: 'Basic How-to on Roasting Garlic',
+    tags: ['ingredient'],
+    ingredients: [
+      'Garlic',
+      'Tin foil',
+      'Oven'
+    ],
+    directions: [
+      'Cut the butt-end of each garlic clove off (great if you leave it hanging by some shell), <strong>do not peel</strong>',
+      'Pile garlic cloves onto piece of tin foil, wrap',
+      'Place in 350&deg; oven until strongly aromatic',
+      'Remove from oven, peel garlic'
+    ],
+    notes: [
+      'Roasted takes away most of the bite that garlic has',
+      'You can tell it\'s done if the shell comes off extremely easily when peeling. Don\'t be afraid to re-wrap and pop it back in the oven'
+    ],
+  },
   hummus: {
     title: 'Hummus',
     name: 'hummus',
@@ -403,15 +424,23 @@ const recipes = {
       'Paprika (garnish)',
     ],
     directions: [
-      'Peel and mince the garlic; mash into paste with coarse salt in a mortar & pestle',
-      'Throw solid and liquid ingredients into a food processor and blend until smooth',
+      `<div>
+        <p>Prepare the garlic in one of the following ways (in order of most to least garlic flavor):</p>
+        <ol>
+          <li>Peel and mince the garlic; mash into paste with coarse salt in a mortar & pestle</li>
+          <li>Peel the garlic</li>
+          <li><a href="/recipes/roasted_garlic.html">Roast 3 cloves garlic</a> (leave 1 clove raw for a touch of bite)</li>
+        </ol>
+      </div>`,
+      'Drain garbanzo beans, reserving 1 can\'s worth of liquid',
+      'Add olive oil, tahini, garlic, lemon juice to food processor; blend until smooth',
+      'Add reserved garbanzo been liquid a bit at a time until desired consistency',
       'Season to taste',
       'Serve in a bowl with a light dusting of paprika on top',
     ],
     notes: [
       'Reduce garlic and add roasted red pepper for a nice change of pace',
       'Serve with <a href="https://youtu.be/NPiA69p4gqE">Chef Jon\'s Homemade Pita</a> recipe',
-      'Use roasted garlic or no mortar & pestle to reduce garlic bite',
       'Peel garbanzo beans for a smoother texture',
     ],
   },
