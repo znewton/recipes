@@ -33,7 +33,7 @@ class Recipe {
 
   toListItemHTML() {
     return `
-<a href="/recipes/${this.name}.html" class="card hoverable">
+<a href="/recipes/${this.name}" class="card hoverable">
   <h3 class="recipe-title">${this.title}</h3>
   <p class="recipe-description">${this.description}</p>
   <div class="recipe-tags">
