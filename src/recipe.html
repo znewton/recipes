@@ -1,29 +1,25 @@
-#!/bin/bash
-
-R_NAME="$1"
-R_TITLE="${2//_/ }"
-
-R_DIR="recipes"
-
-HTML="$R_DIR/$R_NAME.html"
-
-touch "$HTML"
-cat > "$HTML" << HTML
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <base href="/" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>${R_TITLE}</title>
-    <meta name="description" content="${R_TITLE} Recipe"/>
-    <meta property="og:title" content="${R_TITLE}" />
-    <meta property="og:description" content="${R_TITLE} Recipe"/>
+
+    <title>R_TITLE</title>
+
+    <meta name="description" content="R_TITLE Recipe" />
+    <meta property="og:title" content="R_TITLE" />
+    <meta property="og:description" content="R_TITLE Recipe" />
+
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/recipe.css" />
+    <meta name="theme-color" content="#fefeff" />
   </head>
-  <body ontouchstart>
+  <body>
     <header>
-      <h1>${R_TITLE}</h1>
+      <h1>R_TITLE</h1>
     </header>
     <main id="main"></main>
     <span id="back"><span></span><span></span></span>
@@ -31,7 +27,7 @@ cat > "$HTML" << HTML
   <script type="text/javascript" src="/Recipe.js"></script>
   <script type="text/javascript" src="/recipes.js"></script>
   <script type="application/javascript">
-    const recipe = new Recipe(recipes.${R_NAME});
+    const recipe = new Recipe(recipes.R_NAME);
     const main = document.getElementById('main');
     main.innerHTML = recipe.toPageHTML();
 
@@ -40,10 +36,8 @@ cat > "$HTML" << HTML
       if (document.referrer.indexOf(window.location.host) !== -1) {
         window.history.back();
       } else {
-        window.location.href='/';
+        window.location.href = '/';
       }
     });
   </script>
 </html>
-HTML
-

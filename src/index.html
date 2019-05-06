@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Recipes</title>
+
+    <meta
+      name="description"
+      content="A compilation of my recipes for roommates and friends to use. Or anyone, I guess."
+    />
+    <meta property="og:title" content="Recipes" />
+    <meta
+      property="og:description"
+      content="A compilation of my recipes for roommates and friends to use. Or anyone, I guess."
+    />
+
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/recipeList.css" />
+    <meta name="theme-color" content="#fefeff" />
+  </head>
+  <body>
+    <header>
+      <h1>Recipes</h1>
+    </header>
+    <main>
+      <section class="search-bar">
+        <span class="search-icon"></span>
+        <input
+          class="search-input"
+          placeholder="Search..."
+          id="search"
+          name="recipe-search"
+        />
+      </section>
+      <ul id="recipe-list"></ul>
+    </main>
+  </body>
+  <script type="text/javascript" src="Recipe.js"></script>
+  <script type="text/javascript" src="recipes.js"></script>
+  <script type="application/javascript">
+    console.time('main');
+    const searchInputElem = document.getElementById('search');
+    const recipeListWrapper = document.getElementById('recipe-list');
+
+    let searchDebounce = null;
+    let searchTerm = '';
+
+    function handleSearch(e) {
+      const value = e.target.value;
+      searchTerm = (value || '').toLowerCase();
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(buildList, 300);
+    }
+
+    function buildList() {
+      recipeListWrapper.innerHTML = '';
+      const recipeElementMap = {};
+      Object.entries(recipes).forEach(async ([recipeName, recipe]) => {
+        const recipeInstance = new Recipe(recipe);
+        if (
+          !recipeInstance.ingredients.length ||
+          !recipeInstance.toSearchMatchString().includes(searchTerm)
+        )
+          return;
+        const item = document.createElement('li');
+        item.className = 'recipe-list-item';
+        item.innerHTML = recipeInstance.toListItemHTML();
+        recipeElementMap[recipeName] = item;
+      });
+      const recipeKeys = Object.keys(recipeElementMap).sort();
+      recipeKeys.forEach(key => {
+        recipeListWrapper.appendChild(recipeElementMap[key]);
+      });
+    }
+
+    searchInputElem.addEventListener('input', handleSearch);
+    buildList();
+
+    console.timeEnd('main');
+  </script>
+</html>

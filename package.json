@@ -6,16 +6,23 @@
     "doc": "docs"
   },
   "scripts": {
-    "now-build": "./scripts/build"
+    "now-build": "node ./scripts/build.js",
+    "build": "node ./scripts/build.js",
+    "start": "node ./scripts/dev.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/znewton/recipes.git"
   },
-  "author": "Zach Newton <zach@znewton.xyz>",
-  "license": "ISC",
+  "author": "Zach Newton <znewton13@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/znewton/recipes/issues"
   },
-  "homepage": "https://github.com/znewton/recipes#readme"
+  "homepage": "https://github.com/znewton/recipes#readme",
+  "devDependencies": {
+    "open": "^6.2.0",
+    "portfinder": "^1.0.20",
+    "serve": "^11.0.0"
+  }
 }

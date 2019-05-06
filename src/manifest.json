@@ -1,0 +1,10 @@
+{
+  "short_name": "Recipes",
+  "name": "Recipes",
+  "icons": [],
+  "start_url": "/?source=pwa",
+  "background_color": "#fefeff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#fefeff"
+}
