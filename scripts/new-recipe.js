@@ -1,12 +1,13 @@
 const fs = require('fs');
 
 function writeRecipe({ recipeName, recipeTitle, outputDir, template }) {
-  const filePath = `${outputDir}/${recipeName}.html`;
+  const filePath = `${outputDir}/${recipeName}`;
   const formattedTemplate = template
-    .replace(/R_TITLE/, recipeTitle)
-    .replace(/R_NAME/, recipeName);
+    .replace(/R_TITLE/g, recipeTitle)
+    .replace(/R_NAME/g, recipeName);
   return new Promise((resolve, reject) => {
-    fs.writeFile(filePath, formattedTemplate, err => {
+    if (!fs.existsSync(filePath)) fs.mkdirSync(filePath);
+    fs.writeFile(`${filePath}/index.html`, formattedTemplate, err => {
       if (err) reject(err);
       else resolve();
     });
