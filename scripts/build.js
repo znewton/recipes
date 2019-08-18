@@ -3,6 +3,10 @@ import { writeRecipe } from './new-recipe.js';
 import { rootDir, buildDir, srcPath, recipesPath } from './paths.js';
 import recipes from '../src/recipes.js';
 
+if (process.argv[2] === '---now') {
+  recipes = require('./recipes');
+}
+
 async function build() {
   if (!fs.existsSync(buildDir)) {
     fs.mkdirSync(buildDir);

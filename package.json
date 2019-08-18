@@ -7,7 +7,7 @@
   },
   "type": "module",
   "scripts": {
-    "now-build": "node --experimental-modules ./scripts/build.js",
+    "now-build": "babel src scripts --out-dir babel-out && node --experimental-modules ./scripts/build.js --now",
     "build": "node --experimental-modules ./scripts/build.js",
     "start": "node --experimental-modules ./scripts/dev.js"
   },
@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/znewton/recipes#readme",
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
     "eslint": "^6.1.0",
     "open": "^6.2.0",
     "portfinder": "^1.0.20",
