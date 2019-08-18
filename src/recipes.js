@@ -76,7 +76,7 @@ const recipes = Object.freeze({
       "The quality of the marinated artichokes is a big deal; don't cut costs with the artichokes",
     ],
   },
-  brushcetta: {
+  bruschetta: {
     title: 'Tomato Bruschetta',
     name: 'bruschetta',
     description: '',
@@ -530,32 +530,28 @@ const recipes = Object.freeze({
   salsa: {
     title: 'Salsa',
     name: 'salsa',
-    courtesy_of: 'Tristan Duyvejonck',
     description:
       'Expertly crafted by a freshman software engineering student; traditionally eaten mixed with scrambled eggs while playing copious amounts of video games.',
     tags: ['dip', 'easy'],
     ingredients: [
-      '20 oz canned Diced Tomatoes w/ Green Chiles (such as Rotel)',
+      '20 oz canned Diced Tomatoes w/ Green Chiles',
       '28 oz canned Whole Tomatoes',
-      '1/2 cup Fresh Cilantro (or none)',
-      '1/4 Chopped Onion (red, white, or yellow)',
-      '1-2 cloves Minced Garlic',
-      '1 Jalapeno (w/ membrane & seeds included), thinly quartered & sliced',
+      '1/4 Onion (red or white)',
+      '1-2 cloves Garlic',
+      '1 Jalapeno (include seeds for heat if desired)',
       'Ground Cumin',
       'Salt',
-      'Sugar',
       'Cayenne',
       "1/2 lime's juice",
     ],
     directions: [
-      'Throw ingredients into large food processor (>= 12 cups)',
-      'Pulse till desired consistency (10-15 pulses)',
+      'Drain the juice from the tomato cans',
+      'Throw all ingredients <i><strong>except</strong></i> the diced tomatoes into large food processor (>= 12 cups)',
+      'Pulse until barely chunky',
+      'Add diced tomatoes and pulse a couple more times to combine',
       'Adjust seasonings to taste',
     ],
-    notes: [
-      'Heat increases over time in the fridge due to jalapeno seeds',
-      "It ain't Snoop's, but it'll do",
-    ],
+    notes: ['Heat increases over time in the fridge due to jalapeno seeds'],
   },
   butter_cream_sauce: {
     title: 'Butter Cream Sauce',

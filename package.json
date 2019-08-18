@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/znewton/recipes#readme",
   "devDependencies": {
+    "eslint": "^6.1.0",
     "open": "^6.2.0",
     "portfinder": "^1.0.20",
     "serve": "^11.0.0"
