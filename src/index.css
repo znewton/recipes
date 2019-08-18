@@ -46,3 +46,16 @@ main {
 .card.full-width {
   width: 100%;
 }
+
+.recipe-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.recipe-tags .tag {
+  border-radius: 0.2rem;
+  background-color: #eeeefa;
+  height: 1.5rem;
+  padding: 0 0.5rem;
+  margin-right: 0.25rem;
+}

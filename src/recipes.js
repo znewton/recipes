@@ -11,7 +11,7 @@ RECIPE TEMPLATE:
   },
 */
 
-const recipes = Object.freeze({
+const recipes = {
   guacamole: {
     title: 'Guacamole',
     name: 'guacamole',
@@ -27,6 +27,8 @@ const recipes = Object.freeze({
       '1/2 - 1 Lemon',
       '1-2 Tomatoes',
       'Salt',
+      'Cumin',
+      'Cayennes',
     ],
     directions: [
       'Finely dice onion and peppers; mince garlic; transfer to a sturdy mixing bowl',
@@ -417,7 +419,7 @@ const recipes = Object.freeze({
       'Salt',
       'Cumin',
       'Cayenne',
-      'Turmeric',
+      'Turmeric (optional)',
       'Paprika (garnish)',
     ],
     directions: [
@@ -493,19 +495,19 @@ const recipes = Object.freeze({
       'Parmigiano Regiano for garnish',
     ],
     directions: [
-      'Skin and dice acorn squash; toss with Olive oil, salt, cumin, nutmeg, cinnamon, cayenne, all-spice, and pepper',
+      'Skin and dice 2 Acorn Squash; toss with Olive oil, Salt, Ground Cumin, Ground Nutmeg, Cinnamon, Cayenne, Ground All-spice, and Black Pepper',
       'Place on baking sheet(s) and into 375&deg; oven for 45-60min or until starting to brown around the edges',
-      'Roughly chop sage',
-      'Cook noodles until al dente; reserve some pasta water',
+      'Roughly chop Several leaves Fresh Sage',
+      'Cook 16 oz Trofie noodles until al dente; reserve some pasta water',
       `In metal skillet: 
         <ul>
-          <li>heat butter,</li>
+          <li>heat 4 oz Browned Butter,</li>
           <li>add some pasta water, reduce,</li>
-          <li>add sage, a bit more water, reduce</li>
+          <li>add Several leaves Fresh Sage, a bit more water, reduce</li>
           <li>add noodles, touch more water, reduce</li>
           <li>add squash</li>
         </ul>`,
-      'Plate and serve with freshly grated parmesan on top',
+      'Plate and serve with freshly grated Parmigiano Regiano for garnish',
     ],
     notes: ['Squash and butter can be made and refrigerated well-beforehand.'],
   },
@@ -546,21 +548,38 @@ const recipes = Object.freeze({
     ],
     directions: [
       'Drain the juice from the tomato cans',
-      'Throw all ingredients <i><strong>except</strong></i> the diced tomatoes into large food processor (>= 12 cups)',
+      'Throw all ingredients <i>except</i> the diced tomatoes into large food processor (>= 12 cups)',
       'Pulse until barely chunky',
       'Add diced tomatoes and pulse a couple more times to combine',
       'Adjust seasonings to taste',
     ],
     notes: ['Heat increases over time in the fridge due to jalapeno seeds'],
   },
-  butter_cream_sauce: {
-    title: 'Butter Cream Sauce',
-    name: 'butter_cream_sauce',
-    description: '',
-    tags: [],
-    ingredients: [],
-    directions: [],
-    notes: [],
+  wine_cream_sauce: {
+    title: 'Wine Cream Sauce',
+    name: 'wine_cream_sauce',
+    description: "Dad's favorite",
+    tags: ['pasta', 'easy'],
+    ingredients: [
+      'Dry White Wine',
+      'Butter',
+      'Garlic',
+      'Crushed Red Pepper',
+      'Heavy Whipping Cream',
+      'Black Pepper',
+      'Basil',
+      'Oregano',
+      'Parsley',
+    ],
+    directions: [
+      'Finely mince Garlic',
+      'Saute Garlic and Crushed Red Pepper in Butter',
+      'Add Dry White Wine before anything burns',
+      'Simmer for a but to make sure all alcohol is gone',
+      'Add Heavy Whipping Cream, Black Pepper, Basil, Oregano, and Parsley',
+      'Reduce and serve',
+    ],
+    notes: ['Goes great on Butternut Squash Ravioli'],
   },
   mayonnaise: {
     title: 'Mayonnaise',
@@ -571,9 +590,43 @@ const recipes = Object.freeze({
     directions: [],
     notes: [],
   },
+  roma_wine_sauce: {
+    title: 'Roma Wine Sauce',
+    name: 'roma_wine_sauce',
+    courtesy_of: 'Dad',
+    description: '"I think this is it" &mdash; Dad',
+    tags: ['pasta', 'easy'],
+    ingredients: [
+      'Crimini/Baby Bella Mushrooms',
+      'Red Bell Pepper',
+      'Shallot',
+      'Butter',
+      'Roma Tomatoes',
+      'Roasted Garlic',
+      'Sauvignon Blanc <i>or</i> Chardonnay',
+      'Half & Half',
+      'Heavy Cream',
+      'Parmesan',
+      'Salt',
+      'Pepper',
+      'Sage',
+    ],
+    directions: [
+      'Finally chop Crimini/Baby Bella Mushrooms, Shallot, and Red Bell Pepper',
+      'Saute in Butter, Salt, and Pepper... a lot, for a while... longer than you think',
+      'Cut Roma Tomatoes lengthwise, add to skillet',
+      'Finely chop Roasted Garlic, add to skillet',
+      "Add Sauvignon Blanc <i>or</i> Chardonnay (no idea how much, but you'll know)",
+      'Simmer long enough to reduce significantly',
+      'Add Half & Half and Heavy Cream along with some Sage',
+      'At intervals, add Parmesan (should end up being a large amount total)',
+    ],
+    notes: [],
+  },
   vodka_sauce: {
     title: 'Vodka Sauce',
     name: 'vodka_sauce',
+    courtesy_of: 'Dad',
     description: '',
     tags: [],
     ingredients: [],
@@ -595,7 +648,7 @@ const recipes = Object.freeze({
     name: 'mushrooms',
     description:
       '"I don\'t like mushrooms, but I could eat these all day" &mdash; All but 1 person who has tried these',
-    tags: ['fan favorite', 'easy'],
+    tags: ['fan-favorite', 'easy'],
     ingredients: [
       '~2 tbsp Butter',
       '~4 large Portabello Mushrooms',
@@ -706,6 +759,6 @@ const recipes = Object.freeze({
     ],
     notes: ['Exercise caution when handling a knife while intoxicated'],
   },
-});
+};
 
 export default recipes;

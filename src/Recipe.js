@@ -31,15 +31,32 @@ class Recipe {
       .toLowerCase();
   }
 
+  getHTMLTagList() {
+    return (this.tags || [])
+      .map(tag => `<span class="tag">${tag}</span>`)
+      .join('\n');
+  }
+
+  getIngredientBoldenedDirections() {
+    return this.directions.map(direction =>
+      this.ingredients.reduce(
+        (directionAcc, ingredient) =>
+          directionAcc.replace(
+            new RegExp(ingredient, 'ig'),
+            `<strong>${ingredient}</strong>`
+          ),
+        direction
+      )
+    );
+  }
+
   toListItemHTML() {
     return `
 <a href="/recipes/${this.name}" class="card hoverable">
   <h3 class="recipe-title">${this.title}</h3>
   <p class="recipe-description">${this.description}</p>
   <div class="recipe-tags">
-    ${(this.tags || [])
-      .map(tag => `<span class="tag">${tag}</span>`)
-      .join('\n')}
+    ${this.getHTMLTagList()}
   </div>
 </a>
     `;
@@ -51,6 +68,7 @@ class Recipe {
       : '';
     return `
 ${credit}
+<div class="recipe-tags">${this.getHTMLTagList()}</div>
 <section class="card full-width">
   <h2>Ingredients</h2>
   <ul class="ingredients-list">
@@ -64,7 +82,7 @@ ${credit}
               : `<label>
             <input type="checkbox" />
             <span class="checkmark"></span>
-            <span>${ingredient}</span>
+            <span class="ingredient">${ingredient}</span>
           </label>`
           }
         </li>`
@@ -75,7 +93,9 @@ ${credit}
 <section class="card full-width">
   <h2>Directions</h2>
   <ol class="directions-list">
-    ${this.directions.map(direction => `<li>${direction}</li>`).join('\n')}
+    ${this.getIngredientBoldenedDirections()
+      .map(direction => `<li>${direction}</li>`)
+      .join('\n')}
   </ol>
 </section>
 <section class="card full-width">

@@ -22,7 +22,6 @@
       <h1>R_TITLE</h1>
     </header>
     <main id="main"></main>
-    <span id="back"><span></span><span></span></span>
   </body>
   <script type="module" src="/Recipe.js"></script>
   <script type="module" src="/recipes.js"></script>
@@ -32,14 +31,5 @@
     const recipe = new Recipe(recipes.R_NAME);
     const main = document.getElementById('main');
     main.innerHTML = recipe.toPageHTML();
-
-    const backButton = document.getElementById('back');
-    backButton.addEventListener('click', () => {
-      if (document.referrer.indexOf(window.location.host) !== -1) {
-        window.history.back();
-      } else {
-        window.location.href = '/';
-      }
-    });
   </script>
 </html>
