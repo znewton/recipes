@@ -24,9 +24,11 @@
     <main id="main"></main>
     <span id="back"><span></span><span></span></span>
   </body>
-  <script type="text/javascript" src="/Recipe.js"></script>
-  <script type="text/javascript" src="/recipes.js"></script>
-  <script type="application/javascript">
+  <script type="module" src="/Recipe.js"></script>
+  <script type="module" src="/recipes.js"></script>
+  <script type="module">
+    import Recipe from '/Recipe.js';
+    import recipes from '/recipes.js';
     const recipe = new Recipe(recipes.R_NAME);
     const main = document.getElementById('main');
     main.innerHTML = recipe.toPageHTML();

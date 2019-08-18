@@ -1,6 +1,6 @@
-const fs = require('fs');
+import fs from 'fs';
 
-function writeRecipe({ recipeName, recipeTitle, outputDir, template }) {
+export function writeRecipe({ recipeName, recipeTitle, outputDir, template }) {
   const filePath = `${outputDir}/${recipeName}`;
   const formattedTemplate = template
     .replace(/R_TITLE/g, recipeTitle)
@@ -13,7 +13,3 @@ function writeRecipe({ recipeName, recipeTitle, outputDir, template }) {
     });
   });
 }
-
-module.exports = {
-  writeRecipe,
-};

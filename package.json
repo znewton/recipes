@@ -5,10 +5,11 @@
   "directories": {
     "doc": "docs"
   },
+  "type": "module",
   "scripts": {
-    "now-build": "node ./scripts/build.js",
-    "build": "node ./scripts/build.js",
-    "start": "node ./scripts/dev.js"
+    "now-build": "node --experimental-modules ./scripts/build.js",
+    "build": "node --experimental-modules ./scripts/build.js",
+    "start": "node --experimental-modules ./scripts/dev.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
     "open": "^6.2.0",
     "portfinder": "^1.0.20",
     "serve": "^11.0.0"
+  },
+  "engines": {
+    "node": ">= 12"
   }
 }

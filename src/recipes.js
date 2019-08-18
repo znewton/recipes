@@ -11,7 +11,7 @@ RECIPE TEMPLATE:
   },
 */
 
-const recipes = {
+const recipes = Object.freeze({
   guacamole: {
     title: 'Guacamole',
     name: 'guacamole',
@@ -390,26 +390,23 @@ const recipes = {
     name: 'roasted_garlic',
     description: 'Basic How-to on Roasting Garlic',
     tags: ['ingredient'],
-    ingredients: [
-      'Garlic',
-      'Tin foil',
-      'Oven'
-    ],
+    ingredients: ['Garlic', 'Tin foil', 'Oven'],
     directions: [
       'Cut the butt-end of each garlic clove off (great if you leave it hanging by some shell), <strong>do not peel</strong>',
       'Pile garlic cloves onto piece of tin foil, wrap',
       'Place in 350&deg; oven until strongly aromatic',
-      'Remove from oven, peel garlic'
+      'Remove from oven, peel garlic',
     ],
     notes: [
       'Roasted takes away most of the bite that garlic has',
-      'You can tell it\'s done if the shell comes off extremely easily when peeling. Don\'t be afraid to re-wrap and pop it back in the oven'
+      "You can tell it's done if the shell comes off extremely easily when peeling. Don't be afraid to re-wrap and pop it back in the oven",
     ],
   },
   hummus: {
     title: 'Hummus',
     name: 'hummus',
-    description: '"More than I ever thought hummus could be" &mdash; Alan Hogan',
+    description:
+      '"More than I ever thought hummus could be" &mdash; Alan Hogan',
     tags: ['appetizer'],
     ingredients: [
       '2 15 oz cans Garbanzo Beans (w/ salt)',
@@ -432,7 +429,7 @@ const recipes = {
           <li><a href="/recipes/roasted_garlic.html">Roast 3 cloves garlic</a> (leave 1 clove raw for a touch of bite)</li>
         </ol>
       </div>`,
-      'Drain garbanzo beans, reserving 1 can\'s worth of liquid',
+      "Drain garbanzo beans, reserving 1 can's worth of liquid",
       'Add olive oil, tahini, garlic, lemon juice to food processor; blend until smooth',
       'Add reserved garbanzo been liquid a bit at a time until desired consistency',
       'Season to taste',
@@ -713,6 +710,6 @@ const recipes = {
     ],
     notes: ['Exercise caution when handling a knife while intoxicated'],
   },
-};
+});
 
-if (typeof window === 'undefined') module.exports = recipes;
+export default recipes;

@@ -1,9 +1,9 @@
-const fs = require('fs');
-const { exec } = require('child_process');
-const portfinder = require('portfinder');
-const open = require('open');
-const build = require('./build'); // this will build once initially
-const { rootDir, buildDir, srcPath } = require('./paths');
+import fs from 'fs';
+import { exec } from 'child_process';
+import portfinder from 'portfinder';
+import open from 'open';
+import build from './build.js'; // this will build once initially
+import { rootDir, buildDir, srcPath } from './paths.js';
 
 fs.watch(srcPath, (eventType, filename) => {
   console.log(`${filename} ${eventType}d, rebuilding...`);

@@ -87,3 +87,5 @@ ${credit}
     `;
   }
 }
+
+export default Recipe;

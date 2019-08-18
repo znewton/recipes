@@ -1,6 +1,7 @@
-const fs = require('fs');
-const { writeRecipe } = require('./new-recipe');
-const { rootDir, buildDir, srcPath, recipesPath } = require('./paths');
+import fs from 'fs';
+import { writeRecipe } from './new-recipe.js';
+import { rootDir, buildDir, srcPath, recipesPath } from './paths.js';
+import recipes from '../src/recipes.js';
 
 async function build() {
   if (!fs.existsSync(buildDir)) {
@@ -34,7 +35,6 @@ async function build() {
   if (!fs.existsSync(recipesPath)) {
     fs.mkdirSync(recipesPath);
   }
-  const recipes = require(`${srcPath}/recipes`);
   Object.entries(recipes).forEach(([recipeName, recipe]) => {
     filePromises.push(
       writeRecipe({
@@ -77,4 +77,4 @@ async function build() {
 
 build();
 
-module.exports = build;
+export default build;
