@@ -1,11 +1,7 @@
 import fs from 'fs';
 import { writeRecipe } from './new-recipe.js';
 import { rootDir, buildDir, srcPath, recipesPath } from './paths.js';
-import recipes from '../src/recipes.js';
-
-if (process.argv[2] === '---now') {
-  recipes = require('./recipes');
-}
+import recipes from '../recipes.js';
 
 async function build() {
   if (!fs.existsSync(buildDir)) {

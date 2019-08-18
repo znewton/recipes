@@ -15,7 +15,7 @@ function serveBuildFolder(port) {
     `node ${rootDir}/node_modules/serve/bin/serve.js --listen ${port} .`,
     { cwd: buildDir },
     (error, stdout, stderr) => {
-      if (error) throw new Error(err);
+      if (error) throw new Error(error);
       if (stdout) console.log(stdout);
       if (stderr) console.error(stderr);
     }

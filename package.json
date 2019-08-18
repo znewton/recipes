@@ -7,9 +7,9 @@
   },
   "type": "module",
   "scripts": {
-    "now-build": "babel src scripts --out-dir babel-out && node --experimental-modules ./scripts/build.js --now",
-    "build": "node --experimental-modules ./scripts/build.js",
-    "start": "node --experimental-modules ./scripts/dev.js"
+    "now-build": "babel src --out-dir babel-out && node ./babel-out/scripts/build.js --now",
+    "build": "node --experimental-modules ./src/scripts/build.js",
+    "start": "node --experimental-modules ./src/scripts/dev.js"
   },
   "repository": {
     "type": "git",
