@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "recipes",
-  "alias": ["recipes.znewton.dev", "www.recipes.znewton.dev"],
+  "alias": ["recipes.znewton.dev"],
   "builds": [
     {
       "src": "package.json",
